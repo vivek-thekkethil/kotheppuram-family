@@ -3,7 +3,7 @@
 @section('title', 'Members')
 
 @section('head')
-<link rel="stylesheet" href="{{ asset('assets/vendor/cropper/cropper.min.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
 @endsection
 
 @section('content')
@@ -588,7 +588,7 @@
 @endsection
 
 @section('scripts')
-<script src="{{ asset('assets/vendor/cropper/cropper.min.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
 <script>
     (function () {
         var cropper = null;

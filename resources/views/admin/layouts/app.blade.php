@@ -8,7 +8,9 @@
     <meta name="description" content="Admin dashboard">
     <link rel="shortcut icon" href="{{ asset('assets/image/favicon.png') }}">
     <title>@yield('title', 'Admin Dashboard')</title>
-    <link rel="stylesheet" href="{{ asset('assets/css/vendor.bundle.css') }}?ver=104">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor.bundle.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <style>
         .admin-toast-stack {
@@ -258,8 +260,9 @@
         </div>
     </div>
 
-    <script src="{{ asset('assets/js/jquery.bundle.js') }}?ver=104"></script>
-    <script src="{{ asset('assets/js/script.js') }}?ver=104"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('assets/js/script.js') }}"></script>
     <script>
         (function () {
             var stack = document.getElementById('adminToastStack');
