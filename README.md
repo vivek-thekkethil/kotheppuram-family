@@ -1,138 +1,59 @@
-# Kotheppuram Family Portal
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-A Laravel 12 web application for managing family members, celebrations, gallery, events/news, family history, and contact communication with an admin dashboard.
+<p align="center">
+<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+</p>
 
-## Tech Stack
+## About Laravel
 
-- PHP 8.2+
-- Laravel 12
-- MySQL or SQLite
-- Vite + Tailwind CSS
-- Twilio WhatsApp API (optional)
+Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-## Core Features
+- [Simple, fast routing engine](https://laravel.com/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/docs/container).
+- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
+- [Robust background job processing](https://laravel.com/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-### Public Website
-- Home, Gallery, Events, Members, Family History, Contact Us pages
-- Contact form with DB storage + styled email notification
+Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-### Admin Panel
-- Admin login at `/admin`
-- Dashboard with:
-	- overall counts
-	- member analytics (gender split, married, under 18, age groups, data coverage)
-	- upcoming alerts
-	- recent contact messages
-- Member management (CRUD, relationships, photo/crop support)
-- Gallery management (multi-upload + delete)
-- Events & News management
-- Landing slide management
-- Family history management
-- Contact message inbox
-- Custom messaging to selected/all members:
-	- channel: Email / WhatsApp / Both
-	- subject + description
-	- optional attachment
+## Learning Laravel
 
-### Celebration Notifications
-- Daily birthday/anniversary notification command:
-	- email to members
-	- optional WhatsApp send
-	- dedupe per day using cache
-- Scheduled automatically via Laravel scheduler.
+Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
 
-## Local Setup
+If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-```bash
-git clone <your-repo-url>
-cd family
-composer install
-cp .env.example .env
-php artisan key:generate
-php artisan migrate
-npm install
-npm run dev
-php artisan serve
-```
+## Laravel Sponsors
 
-Open: `http://127.0.0.1:8000`
+We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-## Admin Access
+### Premium Partners
 
-Seed default admin:
+- **[Vehikl](https://vehikl.com)**
+- **[Tighten Co.](https://tighten.co)**
+- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
+- **[64 Robots](https://64robots.com)**
+- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
+- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
+- **[Redberry](https://redberry.international/laravel-development)**
+- **[Active Logic](https://activelogic.com)**
 
-```bash
-php artisan db:seed
-```
+## Contributing
 
-Default seeded admin (from `DatabaseSeeder`):
-- Email: `viveknair97k@gmail.com`
-- Password: `12345678`
+Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-Login URL: `/admin`
+## Code of Conduct
 
-## Useful Commands
+In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-Run tests:
+## Security Vulnerabilities
 
-```bash
-php artisan test
-```
+If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
 
-Run celebration notifications manually:
+## License
 
-```bash
-php artisan family:send-daily-celebrations
-```
-
-Preview without sending:
-
-```bash
-php artisan family:send-daily-celebrations --dry-run
-```
-
-Force resend for same day:
-
-```bash
-php artisan family:send-daily-celebrations --force
-```
-
-## Scheduler (Production)
-
-Configured in `routes/console.php`:
-- `family:send-daily-celebrations` runs daily at `FAMILY_NOTIFICATION_RUN_AT`.
-
-Make sure server cron runs Laravel scheduler every minute:
-
-```bash
-* * * * * php /path-to-project/artisan schedule:run >> /dev/null 2>&1
-```
-
-## Environment Variables
-
-Set these in `.env` as needed:
-
-```env
-FAMILY_NOTIFICATION_EMAILS=
-FAMILY_NOTIFICATION_UPCOMING_DAYS=7
-FAMILY_NOTIFICATION_RUN_AT=08:00
-
-FAMILY_WHATSAPP_ENABLED=false
-FAMILY_WHATSAPP_DEFAULT_COUNTRY_CODE=
-
-TWILIO_ACCOUNT_SID=
-TWILIO_AUTH_TOKEN=
-TWILIO_WHATSAPP_FROM=
-```
-
-Mail configuration must also be set (`MAIL_MAILER`, `MAIL_HOST`, etc.) for email features.
-
-## Notes
-
-- Admin routes are protected by auth + admin middleware alias (`admin`).
-- Uploaded files are stored under `public/uploads/*`.
-- Email templates are in `resources/views/emails`.
-
----
-
-© 2026 Kotheppuram Family. All rights reserved.
+The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

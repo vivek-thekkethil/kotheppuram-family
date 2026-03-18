@@ -6,12 +6,10 @@
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Admin dashboard">
-    <link rel="shortcut icon" href="{{ asset('assets/image/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('build/assets/image/favicon.png') }}">
     <title>@yield('title', 'Admin Dashboard')</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-    <link rel="stylesheet" href="{{ asset('assets/css/vendor.bundle.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('build/assets/css/vendor.bundle.css') }}?ver=104">
+    <link rel="stylesheet" href="{{ asset('build/assets/css/style.css') }}">
     <style>
         .admin-toast-stack {
             position: fixed;
@@ -228,7 +226,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="global-delete-confirm-title">Confirm Delete</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
@@ -239,7 +237,7 @@
                     <p class="mb-0" id="global-delete-confirm-message">Are you sure you want to delete this item?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-danger" id="global-delete-confirm-submit">Yes, Delete</button>
                 </div>
             </div>
@@ -260,9 +258,8 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script src="{{ asset('build/assets/js/jquery.bundle.js') }}?ver=104"></script>
+    <script src="{{ asset('build/assets/js/script.js') }}?ver=104"></script>
     <script>
         (function () {
             var stack = document.getElementById('adminToastStack');

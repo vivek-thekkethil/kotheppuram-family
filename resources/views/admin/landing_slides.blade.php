@@ -94,7 +94,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#edit-slide-{{ $slide->id }}">Update</button>
+                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit-slide-{{ $slide->id }}">Update</button>
                                             <form action="{{ route('admin.landing-slides.delete', $slide) }}" method="POST" class="d-inline" data-delete-confirm="true" data-delete-title="Delete Slide" data-delete-message="Are you sure you want to delete this slide? This action cannot be undone.">
                                                 @csrf
                                                 @method('DELETE')
@@ -116,7 +116,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">Update Slide</h5>
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>

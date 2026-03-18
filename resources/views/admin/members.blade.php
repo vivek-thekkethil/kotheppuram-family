@@ -3,7 +3,7 @@
 @section('title', 'Members')
 
 @section('head')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
+<link rel="stylesheet" href="{{ asset('build/assets/vendor/cropper/cropper.min.css') }}">
 @endsection
 
 @section('content')
@@ -425,7 +425,7 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#edit-member-{{ $member->id }}">Update</button>
+                                            <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit-member-{{ $member->id }}">Update</button>
                                             <form action="{{ route('admin.members.delete', $member) }}" method="POST" class="d-inline" data-delete-confirm="true" data-delete-title="Delete Member" data-delete-message="Are you sure you want to delete this member? This action cannot be undone.">
                                                 @csrf
                                                 @method('DELETE')
@@ -465,7 +465,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">Update Member</h5>
-                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
@@ -568,7 +568,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Crop Member Photo</h5>
-                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -578,7 +578,7 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-light" data-dismiss="modal">Cancel</button>
                 <button type="button" class="btn btn-primary" id="apply-member-photo-crop">Apply Crop</button>
             </div>
         </div>
@@ -588,7 +588,7 @@
 @endsection
 
 @section('scripts')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
+<script src="{{ asset('build/assets/vendor/cropper/cropper.min.js') }}"></script>
 <script>
     (function () {
         var cropper = null;
