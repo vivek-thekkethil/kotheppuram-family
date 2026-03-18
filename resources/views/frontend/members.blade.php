@@ -14,6 +14,7 @@
     user-select: none;
     touch-action: none;
     scroll-behavior: smooth;
+    max-height: 75vh;
 }
 
 .family-tree-stage.is-dragging {
@@ -313,6 +314,8 @@
 
     .family-tree-stage {
         padding: 12px;
+        max-height: 60vh;
+        cursor: default;
     }
 
     .family-tree-toolbtn {
