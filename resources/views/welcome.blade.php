@@ -21,14 +21,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="{{ asset('build/assets/frontent/lib/animate/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('build/assets/frontent/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontent/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontent/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{ asset('build/assets/frontent/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontent/css/bootstrap.min.css') }}" rel="stylesheet">
     
     <!-- Template Stylesheet -->
-    <link href="{{ asset('build/assets/frontent/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontent/css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -89,9 +89,9 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="owl-carousel header-carousel animated fadeIn">
-                        <img class="img-fluid" src="{{ asset('build/assets/frontent/img/hero-slider-1.jpg') }}" alt="">
-                        <img class="img-fluid" src="{{ asset('build/assets/frontent/img/hero-slider-2.jpg') }}" alt="">
-                        <img class="img-fluid" src="{{ asset('build/assets/frontent/img/hero-slider-3.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/frontent/img/hero-slider-1.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/frontent/img/hero-slider-2.jpg') }}" alt="">
+                        <img class="img-fluid" src="{{ asset('assets/frontent/img/hero-slider-3.jpg') }}" alt="">
                     </div>
                 </div>
             </div>
@@ -141,10 +141,10 @@
                 <div class="col-lg-6">
                     <div class="row">
                         <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
-                            <img class="img-fluid" src="{{ asset('build/assets/frontent/img/about-1.jpg') }}" alt="">
+                            <img class="img-fluid" src="{{ asset('assets/frontent/img/about-1.jpg') }}" alt="">
                         </div>
                         <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
-                            <img class="img-fluid h-75" src="{{ asset('build/assets/frontent/img/about-2.jpg') }}" alt="">
+                            <img class="img-fluid h-75" src="{{ asset('assets/frontent/img/about-2.jpg') }}" alt="">
                             <div class="h-25 d-flex align-items-center text-center bg-primary px-4">
                                 <h4 class="text-white lh-base mb-0">Award Winning Studio Since 1990</h4>
                             </div>
@@ -252,7 +252,7 @@
                     <div class="row g-0">
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
                             <div class="project-item position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/project-1.jpg') }}" alt="">
+                                <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/project-1.jpg') }}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Kitchen</h4>
                                     <small class="text-white">72 Projects</small>
@@ -261,7 +261,7 @@
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
                             <div class="project-item position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/project-2.jpg') }}" alt="">
+                                <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/project-2.jpg') }}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Bathroom</h4>
                                     <small class="text-white">67 Projects</small>
@@ -270,7 +270,7 @@
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.4s">
                             <div class="project-item position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/project-3.jpg') }}" alt="">
+                                <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/project-3.jpg') }}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Bedroom</h4>
                                     <small class="text-white">53 Projects</small>
@@ -279,7 +279,7 @@
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
                             <div class="project-item position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/project-4.jpg') }}" alt="">
+                                <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/project-4.jpg') }}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Living Room</h4>
                                     <small class="text-white">33 Projects</small>
@@ -288,7 +288,7 @@
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
                             <div class="project-item position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/project-5.jpg') }}" alt="">
+                                <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/project-5.jpg') }}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Furniture</h4>
                                     <small class="text-white">87 Projects</small>
@@ -297,7 +297,7 @@
                         </div>
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.7s">
                             <div class="project-item position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/project-6.jpg') }}" alt="">
+                                <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/project-6.jpg') }}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Rennovation</h4>
                                     <small class="text-white">69 Projects</small>
@@ -340,7 +340,7 @@
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.2s">
                             <div class="service-item h-100 d-flex flex-column justify-content-center bg-primary">
                                 <a href="#!" class="service-img position-relative mb-4">
-                                    <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/service-1.jpg') }}" alt="">
+                                    <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/service-1.jpg') }}" alt="">
                                     <h3>Interior Design</h3>
                                 </a>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -350,7 +350,7 @@
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
                             <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
                                 <a href="#!" class="service-img position-relative mb-4">
-                                    <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/service-2.jpg') }}" alt="">
+                                    <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/service-2.jpg') }}" alt="">
                                     <h3>Implement</h3>
                                 </a>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -360,7 +360,7 @@
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.6s">
                             <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
                                 <a href="#!" class="service-img position-relative mb-4">
-                                    <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/service-3.jpg') }}" alt="">
+                                    <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/service-3.jpg') }}" alt="">
                                     <h3>Renovation</h3>
                                 </a>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -370,7 +370,7 @@
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.8s">
                             <div class="service-item h-100 d-flex flex-column justify-content-center bg-primary">
                                 <a href="#!" class="service-img position-relative mb-4">
-                                    <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/service-4.jpg') }}" alt="">
+                                    <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/service-4.jpg') }}" alt="">
                                     <h3>Commercial</h3>
                                 </a>
                                 <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
@@ -393,7 +393,7 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                     <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/team-1.jpg') }}" alt="">
+                        <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/team-1.jpg') }}" alt="">
                         <div class="team-overlay">
                             <small class="mb-2">Architect</small>
                             <h4 class="lh-base text-light">Boris Johnson</h4>
@@ -416,7 +416,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/team-2.jpg') }}" alt="">
+                        <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/team-2.jpg') }}" alt="">
                         <div class="team-overlay">
                             <small class="mb-2">Architect</small>
                             <h4 class="lh-base text-light">Donald Pakura</h4>
@@ -439,7 +439,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/team-3.jpg') }}" alt="">
+                        <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/team-3.jpg') }}" alt="">
                         <div class="team-overlay">
                             <small class="mb-2">Architect</small>
                             <h4 class="lh-base text-light">Bradley Gordon</h4>
@@ -462,7 +462,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/team-4.jpg') }}" alt="">
+                        <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/team-4.jpg') }}" alt="">
                         <div class="team-overlay">
                             <small class="mb-2">Architect</small>
                             <h4 class="lh-base text-light">Alexander Bell</h4>
@@ -499,7 +499,7 @@
                             <div class="row g-5 align-items-center">
                                 <div class="col-md-6">
                                     <div class="testimonial-img">
-                                        <img class="img-fluid" src="{{ asset('build/assets/frontent/img/testimonial-1.jpg') }}" alt="">
+                                        <img class="img-fluid" src="{{ asset('assets/frontent/img/testimonial-1.jpg') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -518,7 +518,7 @@
                             <div class="row g-5 align-items-center">
                                 <div class="col-md-6">
                                     <div class="testimonial-img">
-                                        <img class="img-fluid" src="{{ asset('build/assets/frontent/img/testimonial-2.jpg') }}" alt="">
+                                        <img class="img-fluid" src="{{ asset('assets/frontent/img/testimonial-2.jpg') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -537,7 +537,7 @@
                             <div class="row g-5 align-items-center">
                                 <div class="col-md-6">
                                     <div class="testimonial-img">
-                                        <img class="img-fluid" src="{{ asset('build/assets/frontent/img/testimonial-3.jpg') }}" alt="">
+                                        <img class="img-fluid" src="{{ asset('assets/frontent/img/testimonial-3.jpg') }}" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -565,7 +565,7 @@
         <div class="container p-0">
             <div class="row g-0 align-items-center">
                 <div class="col-md-5 ps-lg-0 text-start wow fadeIn" data-wow-delay="0.2s">
-                    <img class="img-fluid w-100" src="{{ asset('build/assets/frontent/img/newsletter.jpg') }}" alt="">
+                    <img class="img-fluid w-100" src="{{ asset('assets/frontent/img/newsletter.jpg') }}" alt="">
                 </div>
                 <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-5">
@@ -668,13 +668,13 @@
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('build/assets/frontent/lib/wow/wow.min.js') }}"></script>
-    <script src="{{ asset('build/assets/frontent/lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('build/assets/frontent/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('build/assets/frontent/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/frontent/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/frontent/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('assets/frontent/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/frontent/lib/owlcarousel/owl.carousel.min.js') }}"></script>
 
     <!-- Template Javascript -->
-    <script src="{{ asset('build/assets/frontent/js/main.js') }}"></script>
+    <script src="{{ asset('assets/frontent/js/main.js') }}"></script>
 </body>
 
 </html>

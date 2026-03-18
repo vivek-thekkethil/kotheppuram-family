@@ -6,10 +6,10 @@
     <meta name="author" content="Softnio">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Admin dashboard">
-    <link rel="shortcut icon" href="{{ asset('build/assets/image/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/image/favicon.png') }}">
     <title>@yield('title', 'Admin Dashboard')</title>
-    <link rel="stylesheet" href="{{ asset('build/assets/css/vendor.bundle.css') }}?ver=104">
-    <link rel="stylesheet" href="{{ asset('build/assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/vendor.bundle.css') }}?ver=104">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <style>
         .admin-toast-stack {
             position: fixed;
@@ -258,8 +258,8 @@
         </div>
     </div>
 
-    <script src="{{ asset('build/assets/js/jquery.bundle.js') }}?ver=104"></script>
-    <script src="{{ asset('build/assets/js/script.js') }}?ver=104"></script>
+    <script src="{{ asset('assets/js/jquery.bundle.js') }}?ver=104"></script>
+    <script src="{{ asset('assets/js/script.js') }}?ver=104"></script>
     <script>
         (function () {
             var stack = document.getElementById('adminToastStack');

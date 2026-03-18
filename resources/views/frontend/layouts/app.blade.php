@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="{{ asset('build/assets/frontent/img/favicon.ico') }}" rel="icon">
+    <link href="{{ asset('assets/frontent/img/favicon.ico') }}" rel="icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,12 +21,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries -->
-    <link href="{{ asset('build/assets/frontent/lib/animate/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('build/assets/frontent/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontent/lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontent/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
     <!-- Bootstrap & Template -->
-    <link href="{{ asset('build/assets/frontent/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('build/assets/frontent/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontent/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/frontent/css/style.css') }}" rel="stylesheet">
 
     <style>
         /* ─── Global overrides ─── */
@@ -258,11 +258,11 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('build/assets/frontent/lib/wow/wow.min.js') }}"></script>
-    <script src="{{ asset('build/assets/frontent/lib/easing/easing.min.js') }}"></script>
-    <script src="{{ asset('build/assets/frontent/lib/waypoints/waypoints.min.js') }}"></script>
-    <script src="{{ asset('build/assets/frontent/lib/owlcarousel/owl.carousel.min.js') }}"></script>
-    <script src="{{ asset('build/assets/frontent/js/main.js') }}"></script>
+    <script src="{{ asset('assets/frontent/lib/wow/wow.min.js') }}"></script>
+    <script src="{{ asset('assets/frontent/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('assets/frontent/lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ asset('assets/frontent/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('assets/frontent/js/main.js') }}"></script>
 
     @if (isset($todayAlerts) && $todayAlerts->isNotEmpty())
         <script>
