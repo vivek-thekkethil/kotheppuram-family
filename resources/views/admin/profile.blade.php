@@ -192,7 +192,7 @@
                             <h6 class="card-title card-title-sm">Receiving Wallet</h6>
                             <div class="d-flex justify-content-between">
                                 <span><span>0x39deb3.....e2ac64rd</span> <em class="fas fa-info-circle text-exlight" data-toggle="tooltip" data-placement="bottom" title="1 ETH = 100 TWZ"></em></span>
-                                <a href="#" data-toggle="modal" data-target="#edit-wallet" class="link link-ucap">Edit</a>
+                                <a href="#" data-bs-toggle="modal" data-bs-target="#edit-wallet" class="link link-ucap">Edit</a>
                             </div>
                         </div>
                     </div>

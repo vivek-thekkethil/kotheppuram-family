@@ -80,7 +80,7 @@
                                             <img src="{{ asset($item->photo_path) }}" alt="{{ $item->title }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px;">
                                         @endif
                                         <p class="mb-3">{{ $item->description ?: 'No description.' }}</p>
-                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit-item-{{ $item->id }}">Update</button>
+                                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#edit-item-{{ $item->id }}">Update</button>
                                         <form action="{{ route('admin.event-news.delete', $item) }}" method="POST" class="d-inline" data-delete-confirm="true" data-delete-title="Delete Entry" data-delete-message="Are you sure you want to delete this entry? This action cannot be undone.">
                                             @csrf
                                             @method('DELETE')
@@ -116,7 +116,7 @@
                                             <img src="{{ asset($item->photo_path) }}" alt="{{ $item->title }}" style="width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 12px;">
                                         @endif
                                         <p class="mb-3">{{ $item->description ?: 'No description.' }}</p>
-                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#edit-item-{{ $item->id }}">Update</button>
+                                        <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#edit-item-{{ $item->id }}">Update</button>
                                         <form action="{{ route('admin.event-news.delete', $item) }}" method="POST" class="d-inline" data-delete-confirm="true" data-delete-title="Delete Entry" data-delete-message="Are you sure you want to delete this entry? This action cannot be undone.">
                                             @csrf
                                             @method('DELETE')
@@ -137,7 +137,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">Update {{ ucfirst($item->type) }}</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
