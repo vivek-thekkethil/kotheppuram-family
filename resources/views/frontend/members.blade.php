@@ -584,6 +584,7 @@
         }
 
         function beginDrag(event) {
+            if (event.pointerType === 'touch') return; // touch is handled by touch events below
             if (event.target.closest('.family-tree-toolbtn') || event.target.closest('.ft-photo-preview') || event.target.closest('.member-photo-preview')) {
                 return;
             }
@@ -633,6 +634,44 @@
         stage.addEventListener('pointerup', endDrag);
         stage.addEventListener('pointercancel', endDrag);
         stage.addEventListener('pointerleave', endDrag);
+
+        // ── Touch events for iOS Safari ──────────────────────────────────────
+        // iOS Safari intercepts touch inside overflow:auto containers before
+        // pointer events can fire, even when touch-action:none is set.
+        // Using explicit touch handlers with preventDefault() bypasses this.
+        stage.addEventListener('touchstart', function (e) {
+            if (e.target.closest('.family-tree-toolbtn') || e.target.closest('.ft-photo-preview') || e.target.closest('.member-photo-preview')) {
+                return;
+            }
+            if (e.touches.length !== 1) return;
+            e.preventDefault();
+            var t = e.touches[0];
+            isDragging = true;
+            startX = t.clientX;
+            startY = t.clientY;
+            startScrollLeft = stage.scrollLeft;
+            startScrollTop = stage.scrollTop;
+            stage.classList.add('is-dragging');
+        }, { passive: false });
+
+        stage.addEventListener('touchmove', function (e) {
+            if (!isDragging || e.touches.length !== 1) return;
+            e.preventDefault();
+            var t = e.touches[0];
+            stage.scrollLeft = startScrollLeft - (t.clientX - startX);
+            stage.scrollTop = startScrollTop - (t.clientY - startY);
+        }, { passive: false });
+
+        stage.addEventListener('touchend', function () {
+            isDragging = false;
+            stage.classList.remove('is-dragging');
+        });
+
+        stage.addEventListener('touchcancel', function () {
+            isDragging = false;
+            stage.classList.remove('is-dragging');
+        });
+        // ────────────────────────────────────────────────────────────────────
 
         if (zoomInBtn) {
             zoomInBtn.addEventListener('click', function () {

@@ -93,6 +93,12 @@
             color: var(--primary);
             border-radius: 6px;
             padding: 2px 10px;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 575.98px) {
+            h2.section-title { font-size: 1.35rem; }
         }
 
         /* ─── Footer ─── */

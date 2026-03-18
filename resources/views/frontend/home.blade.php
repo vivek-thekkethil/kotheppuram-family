@@ -240,8 +240,8 @@
             <h4 class="mb-1" style="color:#2c2c54;">Upcoming Celebrations</h4>
             <p class="mb-0" style="color:#7f849d; font-size:14px;">Birthdays and anniversaries coming in the next 30 days.</p>
         </div>
-        <button type="button" class="btn btn-light rounded-circle" id="closeCelebrationDrawer" style="width:40px;height:40px;">
-            <i class="bi bi-x-lg"></i>
+        <button type="button" class="rounded-circle d-inline-flex align-items-center justify-content-center border-0" id="closeCelebrationDrawer" style="width:36px;height:36px;flex-shrink:0;padding:0;background:#2c2c54;color:#fff;font-size:18px;cursor:pointer;line-height:1;">
+            <i class="bi bi-x"></i>
         </button>
     </div>
 
@@ -310,9 +310,9 @@
 @if ($memberPreview->isNotEmpty())
 <div class="container-fluid py-5">
     <div class="container">
-        <div class="d-flex justify-content-between align-items-end mb-5">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-5">
             <h2 class="mb-0 section-title" style="color:#2c2c54;">Our <span>Family Members</span></h2>
-            <a href="{{ route('frontend.members') }}" class="btn btn-outline-primary btn-sm">
+            <a href="{{ route('frontend.members') }}" class="btn btn-outline-primary btn-sm flex-shrink-0">
                 View All <i class="bi bi-arrow-right ms-1"></i>
             </a>
         </div>
