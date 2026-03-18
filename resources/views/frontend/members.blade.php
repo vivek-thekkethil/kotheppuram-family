@@ -10,15 +10,10 @@
     background: radial-gradient(circle at top left, rgba(122, 92, 255, 0.14), transparent 28%), linear-gradient(180deg, #ffffff 0%, #f7f8ff 100%);
     border: 1px solid rgba(122, 92, 255, 0.12);
     box-shadow: 0 20px 60px rgba(122, 92, 255, 0.12);
-    cursor: grab;
     user-select: none;
-    touch-action: none;
+    -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     max-height: 75vh;
-}
-
-.family-tree-stage.is-dragging {
-    cursor: grabbing;
 }
 
 .family-tree-toolbar {
@@ -315,7 +310,6 @@
     .family-tree-stage {
         padding: 12px;
         max-height: 60vh;
-        cursor: default;
     }
 
     .family-tree-toolbtn {
@@ -436,7 +430,7 @@
                     <p class="mb-0" style="color:#7f849d; max-width:700px;">Easily find your relatives and explore your family connections through our interactive family tree.</p>
                 </div>
                 <div class="d-flex align-items-center gap-2 flex-wrap justify-content-end">
-                    <span class="badge rounded-pill" style="background:rgba(122,92,255,0.1); color:#7a5cff; padding:10px 14px; font-size:12px;">Drag to pan</span>
+                    <span class="badge rounded-pill" style="background:rgba(122,92,255,0.1); color:#7a5cff; padding:10px 14px; font-size:12px;">Swipe to scroll</span>
                     <div class="family-tree-toolbar">
                         <button type="button" class="family-tree-toolbtn" id="treeZoomOut" aria-label="Zoom out" title="Zoom out">
                             −
@@ -521,12 +515,6 @@
         var scale = 1;
         var baseWidth = 0;
         var baseHeight = 0;
-        var isDragging = false;
-        var startX = 0;
-        var startY = 0;
-        var startScrollLeft = 0;
-        var startScrollTop = 0;
-        var activePointerId = null;
 
         function clamp(value, min, max) {
             return Math.min(Math.max(value, min), max);
@@ -585,96 +573,6 @@
                 stage.scrollTop = Math.max((canvas.offsetHeight * centerRatioY) - (stage.clientHeight / 2), 0);
             }
         }
-
-        function beginDrag(event) {
-            if (event.pointerType === 'touch') return; // touch is handled by touch events below
-            if (event.target.closest('.family-tree-toolbtn') || event.target.closest('.ft-photo-preview') || event.target.closest('.member-photo-preview')) {
-                return;
-            }
-
-            isDragging = true;
-            activePointerId = event.pointerId;
-            startX = event.clientX;
-            startY = event.clientY;
-            startScrollLeft = stage.scrollLeft;
-            startScrollTop = stage.scrollTop;
-            stage.classList.add('is-dragging');
-            stage.setPointerCapture(event.pointerId);
-        }
-
-        function moveDrag(event) {
-            if (!isDragging || event.pointerId !== activePointerId) {
-                return;
-            }
-
-            var deltaX = event.clientX - startX;
-            var deltaY = event.clientY - startY;
-            stage.scrollLeft = startScrollLeft - deltaX;
-            stage.scrollTop = startScrollTop - deltaY;
-        }
-
-        function endDrag(event) {
-            if (!isDragging || (typeof activePointerId === 'number' && event.pointerId !== activePointerId)) {
-                return;
-            }
-
-            isDragging = false;
-            stage.classList.remove('is-dragging');
-
-            if (typeof activePointerId === 'number') {
-                try {
-                    stage.releasePointerCapture(activePointerId);
-                } catch (error) {
-                    // no-op
-                }
-            }
-
-            activePointerId = null;
-        }
-
-        stage.addEventListener('pointerdown', beginDrag);
-        stage.addEventListener('pointermove', moveDrag);
-        stage.addEventListener('pointerup', endDrag);
-        stage.addEventListener('pointercancel', endDrag);
-        stage.addEventListener('pointerleave', endDrag);
-
-        // ── Touch events for iOS Safari ──────────────────────────────────────
-        // iOS Safari intercepts touch inside overflow:auto containers before
-        // pointer events can fire, even when touch-action:none is set.
-        // Using explicit touch handlers with preventDefault() bypasses this.
-        stage.addEventListener('touchstart', function (e) {
-            if (e.target.closest('.family-tree-toolbtn') || e.target.closest('.ft-photo-preview') || e.target.closest('.member-photo-preview')) {
-                return;
-            }
-            if (e.touches.length !== 1) return;
-            e.preventDefault();
-            var t = e.touches[0];
-            isDragging = true;
-            startX = t.clientX;
-            startY = t.clientY;
-            startScrollLeft = stage.scrollLeft;
-            startScrollTop = stage.scrollTop;
-            stage.classList.add('is-dragging');
-        }, { passive: false });
-
-        stage.addEventListener('touchmove', function (e) {
-            if (!isDragging || e.touches.length !== 1) return;
-            e.preventDefault();
-            var t = e.touches[0];
-            stage.scrollLeft = startScrollLeft - (t.clientX - startX);
-            stage.scrollTop = startScrollTop - (t.clientY - startY);
-        }, { passive: false });
-
-        stage.addEventListener('touchend', function () {
-            isDragging = false;
-            stage.classList.remove('is-dragging');
-        });
-
-        stage.addEventListener('touchcancel', function () {
-            isDragging = false;
-            stage.classList.remove('is-dragging');
-        });
-        // ────────────────────────────────────────────────────────────────────
 
         if (zoomInBtn) {
             zoomInBtn.addEventListener('click', function () {
