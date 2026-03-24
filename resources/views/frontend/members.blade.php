@@ -162,6 +162,7 @@
 .ft-person-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 18px 34px rgba(122, 92, 255, 0.16);
+    z-index: 20;
 }
 
 .ft-spouse-card {
@@ -204,6 +205,12 @@
 .ft-photo-hover {
     position: relative;
     display: inline-flex;
+    z-index: 1;
+}
+
+.member-photo-hover:hover,
+.ft-photo-hover:hover {
+    z-index: 100;
 }
 
 .member-photo-preview,
